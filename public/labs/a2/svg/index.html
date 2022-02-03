@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a name="top"></a>
+<h2>Table of content</h2>
+<ul>
+    <li><a href="#drawing-rectangles">
+        Drawing rectangles</a></li>
+    <li><a href="#drawing-circles">
+        Drawing circles</a></li>
+    <li><a href="#drawing-polygons">
+        Drawing polygons</a></li>
+</ul>
+
+<a name="drawing-rectangles"></a>
+<h2>Drawing rectangles</h2>
+<a href="#top">Top</a><br/>
+
+<svg width="300" height="100">
+    <rect width="300" height="100"
+          style="fill:rgb(0,0,255); stroke-width:10;
+        stroke:rgb(0,0,0)" />
+</svg>
+
+<a name="drawing-circles"></a>
+<h2>Drawing circles</h2>
+<a href="#top">Top</a><br/>
+
+<svg width="100" height="100">
+    <circle cx="50" cy="50" r="40"
+            stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+
+<a name="drawing-polygons"></a>
+<h2>Drawing polygons</h2>
+<a href="#top">Top</a><br/>
+
+<svg width="300" height="200">
+    <polygon points="100,10 40,198 190,78 10,78 160,198"
+             style="fill:lime; stroke:purple; stroke-width:5; fill-rule:evenodd;" />
+</svg>
+<!--	svg declares a rectangular area where we can draw
+	width and height attributes configure the size of the area
+	rect tag declares a rectangular area to draw a rectangle
+	width and height attributes declare size of rectangle
+	style attribute declares border and fill colors and border
+	width
+
+	circle tag declares a rectangular area to draw a circle
+	cx and cy attributes declares the center position
+	r attribute declares the radius of the circle
+	stroke declares the color to draw with
+	stroke-width declares the size of the border
+	fill declares color to fill the circle -->
+
+</body>
+</html>
