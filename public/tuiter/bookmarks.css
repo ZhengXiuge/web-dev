@@ -1,0 +1,102 @@
+html, body{
+    background-color: black;
+
+    border-left-style: solid;
+    border-left: rgb(47,51,54);
+
+    border-right-style: solid;
+    border-right: rgb(47,51,54);
+}
+
+.wd-border-bottom {
+    border-bottom-style: solid;
+    border-bottom-color: lightgray;
+    border-width: 1px;
+    /*padding: 16px 0px;*/
+    /*margin: 0px 16px;*/
+}
+
+.wd-bookmark-title {
+    padding-left: 16px;
+    padding-top: 12px;
+    color: white;
+    font-size: 20px;
+}
+
+.wd-bookmark-handle {
+    color: lightgray;
+    font-size: 13px;
+    padding-left: 16px;
+    padding-bottom: 12px;
+}
+
+.wd-ps-avater {
+    padding-left: 16px;
+    padding-top: 12px;
+    border-radius: 48px;
+}
+
+.wd-author {
+    padding-left: 12px;
+    padding-top: 12px;
+    font-size: 15px;
+    color: white;
+}
+
+.wd-handle {
+    /*padding-left: 12px;*/
+    /*padding-top: 12px;*/
+    font-size: 15px;
+    color: lightgray;
+}
+
+.wd-content {
+    padding-left: 12px;
+    padding-bottom: 12px;
+    fint-size: white;
+    color: white;
+    wdith: 506px;
+}
+
+.wd-float-left {
+    float: left;
+}
+
+.wd-image {
+    padding-top: 12px;
+    padding-left: 12px;
+    border-radius: 48px;
+}
+
+.wd-title {
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.wd-text{
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    color: lightgray;
+    border-bottom-left-radius: 48px;
+    border-bottom-right-radius: 48px;
+}
+
+.wd-bookmark-icon {
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    color: lightgray;
+}
+
+.wd-bookmark-icon a {
+    color: lightgray;
+}
+
+.wd-heart-icon-color {
+    color: palevioletred;
+}

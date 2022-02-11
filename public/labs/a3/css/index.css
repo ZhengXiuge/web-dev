@@ -1,0 +1,357 @@
+/*p {
+    background-color: blue;
+    color: white;
+}*/
+
+/*
+Instead of changing the look and feel of all the elements of the same name,
+e.g., p, we can refer to a specific element by their ID.
+*/
+p#id-selector-1 {
+    background-color: red;
+    color: white;
+}
+p#id-selector-2 {
+    background-color: yellow;
+    color: black;
+}
+
+/*
+Class selectors can be used just like ID selectors if you keep them unique, but can also be used to
+apply the same style to several elements, even if they are different types of elements.
+ */
+.class-selector {
+    background-color: yellow;
+    color: blue;
+}
+
+/*
+Selectors can be combined to refer to elements in particular places in the document.
+A set of selectors separated by a space can refer to elements in a hierarchy.
+For instance: .selector1 .selector2 { … } refers to an element whose class is .selector2
+and is inside some descendant of another element whose class is .selector1.
+If we use ">" instead to separate the classes, then we can establish a direct parent/child relationship.
+ */
+
+/*
+<!--	refers to .selector-3 as a descendant of .selector-1 -->
+ */
+.selector-1 .selector-3 {
+    background-color: red;
+    color: white;
+}
+/*
+<!--	refers to .selector-4 as a direct child of .selector-3
+	which is a direct child of .selector-2
+-->
+ */
+.selector-2 > .selector-3 > .selector-4 {
+    background-color: yellow;
+    color: blue;
+}
+
+/*
+Self practice
+ */
+.selector-1{
+    background-color: forestgreen;
+    color:aqua;
+}
+
+.selector-1 > .selector-2 {
+    background-color: cadetblue;
+    color:brown;
+}
+
+/*
+Declare several useful foreground color classes
+ */
+.fg-color-black { color: black; }
+.fg-color-white { color: white; }
+.fg-color-blue { color: #7070ff; }
+.fg-color-red { color: #ff7070; }
+.fg-color-green { color: green; }
+
+/*
+Declare several useful background color classes
+ */
+.bg-color-yellow
+{ background-color: #ffff07; }
+.bg-color-blue
+{ background-color: #7070ff; }
+.bg-color-red
+{ background-color: #ff7070; }
+.bg-color-green
+{ background-color: green; }
+.bg-color-pink
+{ background-color: pink;}
+
+/*
+<!--	configure border with several properties
+	how wide the border is. Can also provide per border
+	the style of the border
+	the color of the border
+-->
+.some-selector {
+  border-width: 10px;
+  border-style: solid | dotted | dashed | double;
+  border-color: red | blue ...;
+}
+ */
+.border-fat
+{ border-width: 20px 30px 20px 30px; }
+.border-thin { border-width: 4px; }
+.border-solid { border-style: solid; }
+.border-dashed { border-style: dashed; }
+.border-yellow { border-color: #ffff07; }
+.border-red { border-color: #ff7070; }
+.border-blue { border-color: #7070ff; }
+
+/*
+Padding
+ */
+.padded-top-left {
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.padded-bottom-right {
+    padding-bottom: 50px;
+    padding-right: 100px;
+}
+
+.padding-fat {
+    padding: 50px;
+}
+
+/*
+Margins
+ */
+.margin-bottom {
+    margin-bottom: 50px;
+}
+
+.margin-right-left {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.margin-all-around {
+    margin: 30px;
+}
+
+/*
+Rounded corners
+ */
+.rounded-corners-top {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.rounded-corners-bottom {
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.rounded-corners-all-around {
+    border-radius: 50px;
+}
+
+.rounded-corners-inline {
+    border-radius: 30px 0px 20px 50px;
+}
+
+/*
+Configure an element's dimensions with width and height properties
+ */
+.dimension-portrait {
+    width: 75px;
+    height: 100px;
+}
+
+.dimension-landscape {
+    width: 100px;
+    height: 75px;
+}
+
+.dimension-square {
+    width: 75px;
+    height: 75px;
+}
+
+/*
+Setting position property to relative allows moving the element relative to its original position.
+ */
+.pos-relative-nudge-up-right {
+    position: relative;
+    bottom: 30px;
+    left: 30px;
+}
+.pos-relative-nudge-down-right {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+.pos-relative {
+    position: relative;
+}
+
+.min-height-150 {
+    height: 150px;
+}
+.min-height-auto {
+    height: auto;
+}
+
+/*
+Self practice
+ */
+.pos-relative-nudge-up-left {
+    position: relative;
+    bottom: 100px;
+    right: 5px;
+}
+
+.pos-relative-nudge-down-left {
+    position:relative;
+    top: 20px;
+    right: 50px;
+}
+
+.pos-relative-nudge-right-40 {
+    position:relative;
+    left: 40%;
+}
+
+.pos-relative-nudge-left-70 {
+    position:relative;
+    right: 70%;
+}
+
+/*
+Setting position property to absolute allows moving the element relative to the position of its parent.
+ */
+.pos-absolute-10-10 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.pos-absolute-50-50 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+.pos-absolute-120-20 {
+    position: absolute;
+    top: 20px;
+    left: 120px;
+}
+
+/*
+Setting position property to fixed allows setting the element relative to the window.
+That means that if you scroll the content of the page, the element will not scroll with it.
+ */
+.pos-fixed {
+    position: fixed;
+    right: 0px;
+    bottom: 50%;
+}
+
+.pos-relative-precent {
+    position: relative;
+    bottom: 50%;
+}
+
+/*
+Z-Index
+When the browser renders content declared in HTML documents, it calculates positions and dimensions
+so every element has a dedicated rectangle on the window.
+
+Typically elements don't fall on top of each other.
+When you start moving elements with position, then overlapping elements are possible.
+
+By default elements are rendered in the order declared in HTML documents.
+Elements declared later render on top of elements declared earlier.
+
+The z-index CSS property overrides this behavior. Default value of z-index is auto,
+which corresponds to 0. Increasing z-index can make elements render later, or on top of, others.
+ */
+.zindex-bring-to-front {
+    z-index: 10;
+}
+
+/*
+Self practice
+ */
+.pos-relative-10-10 {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+.pos-relative-50-50 {
+    position: relative;
+    top: -50px;
+    left: 50px;
+}
+.pos-relative-100-150 {
+    position: relative;
+    bottom: 150px;
+    left: 100px;
+}
+
+/*
+Float
+HTML does not support laying out content horizontally. The CSS float property allows fixing that.
+ */
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+    height: 100px;
+}
+
+.float-done {
+    clear: both;
+}
+
+/*
+Using float we can implement a grid layout made up of rows and columns.
+ */
+.grid-row {
+    clear: both;
+}
+
+.grid-col-half-page {
+    width: 50%;
+    float: left;
+}
+
+.grid-col-third-page {
+    width: 33%;
+    float: left;
+}
+.grid-col-two-thirds-page {
+    width: 67%;
+    float: left;
+}
+.grid-col-left-sidebar {
+    width: 20%;
+    float: left;
+}
+.grid-col-main-content {
+    width: 60%;
+    float: left;
+}
+.grid-col-right-sidebar {
+    width: 20%;
+    float: left;
+}
+
+
+
+
+
+
+
