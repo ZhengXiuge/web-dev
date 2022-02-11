@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
+// import './vendors/fontawesome/css/all.min.css';
+
 function App() {
   return (
     <div className="App">
