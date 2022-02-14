@@ -1,0 +1,408 @@
+.rotate-paragraph {
+    width: 250px;
+    height: 250px;
+    transform: rotate(90deg);
+}
+
+.rotate-list {
+    transform: rotate(12deg);
+    width: 100px;
+    background-color: red;
+    color: white;
+}
+
+.rotate-counterclockwise-list {
+    transform: rotate(-12deg);
+    width: 100px;
+    background-color: yellow;
+    color: black;
+}
+
+/*
+Instead of rotating an entire list, we could instead rotate individual line items of the list.
+Positive degrees rotate elements clockwise and negative degrees rotate them counterclockwise.
+ */
+.rotate-list-items li {
+    width: 100px;
+    text-align: right;
+}
+.rotate-list-items li:nth-child(1) {
+    transform: rotate(-10deg);
+    background-color: yellow;
+}
+.rotate-list-items li:nth-child(2) {
+    transform: rotate(2deg);
+    background-color: blue;
+    color: white;
+}
+.rotate-list-items li:nth-child(3) {
+    transform: rotate(10deg);
+    background-color: red;
+}
+
+/*
+Applying rotation to an image element.
+ */
+.rotate-image {
+    transform: rotate(-10deg);
+}
+
+.rotate-another-image {
+    transform: rotate(5deg);
+}
+
+/*
+Rotate an entire table
+ */
+.rotate-table {
+    position: relative;
+    left: 50px;
+    transform: rotate(15deg);}
+.rotate-table tr:nth-child(1) {
+    background-color: black;
+    color: white;}
+.rotate-table tr:nth-child(n+2) {
+    background-color: yellow;}
+.rotate-table tr:nth-child(n+5) {
+    background-color: blue;
+    color: white;}
+.rotate-table tr:nth-child(n+8) {
+    background-color: red;}
+.rotate-table tr:nth-child(n+11) {
+    background-color: green;
+    color: white;
+}
+
+/*
+CSS allows applying different types of gradients when working with colors.
+ */
+
+/*
+Linear gradients
+ */
+.gradients-linear {
+    background: linear-gradient(yellow, red);
+    width: 200px;
+    height: 200px;
+}
+
+.gradients-linear-practice {
+    background: linear-gradient(cornflowerblue, mediumpurple);
+    width: 450px;
+    height: 200px;
+}
+
+/*
+Radial gradients
+ */
+.gradients-radial {
+    background: radial-gradient(yellow, green);
+    width: 200px;
+    height: 200px;
+}
+
+.gradients-radial-practice {
+    background: radial-gradient(pink, darkred);
+    color: white;
+    width: 200px;
+    height: 400px;
+}
+
+/*
+Positioning radial gradients - Some cool effects can be achieved by moving the position of the center of radial gradients.
+ */
+.gradients-positioned {
+    background:
+            radial-gradient(at top left, blue, red);
+    width: 200px;
+    height: 200px;
+    color: white;
+}
+
+.gradients-positioned-practice {
+    background:
+            radial-gradient(at top right, red, yellow);
+    width: 450px;
+    height: 200px;
+    color: black;
+}
+
+/*
+CSS can control some fairly complex animations by specifying several CSS transformations for several
+key frames. The browser can then interpolate between the different transformations along a specified
+unit of time.
+ */
+.animation-keyframes {
+    position: relative;
+    top: 0px;
+    animation-duration: 7s;
+    animation-name: slidein;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: white;
+}
+
+@keyframes slidein {
+    from {
+        position: relative;
+        top: 0px;
+        font-size: 100%;
+        margin-left: 100%;
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        color: black;
+    }
+
+    50% {
+        position: relative;
+        top: -200px;
+        font-size: 300%;
+        margin-left: 25%;
+        width: 400px;
+        height: 400px;
+        background-color: blue;
+        color: white;
+    }
+
+    to {
+        position: relative;
+        top: 0px;
+        font-size: 100%;
+        margin-left: 0%;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        color: white;
+    }
+}
+
+.animation-keyframes-practice {
+    position: relative;
+    top: 0px;
+    animation-duration: 10s;
+    animation-name: new_slidein;
+    width: 450px;
+    height: 200px;
+    background-color: green;
+    color: white;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes new_slidein {
+    from {
+        position: relative;
+        top: 0px;
+        font-size: 100%;
+        margin-left: 100%;
+        width: 450px;
+        height: 200px;
+        background-color: lightblue;
+        color: darkblue;
+    }
+
+    65% {
+        position: relative;
+        top: -200px;
+        font-size: 200%;
+        margin-left: 25%;
+        width: 400px;
+        height: 900px;
+        background-color: darkblue;
+        color: lightblue;
+    }
+
+    to {
+        position: relative;
+        top: 0px;
+        font-size: 100%;
+        margin-left: 0%;
+        width: 450px;
+        height: 200px;
+        background-color: rebeccapurple;
+        color: lightsalmon;
+    }
+}
+
+/*
+Flex is a set of styles that allows you to quickly layout a Web Page.
+ */
+.flex-container {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+}
+.flex-box {
+    border: 5px gray solid;
+    margin: 10px;
+    padding: 10px;
+}
+.flex-box-1 {
+    background-color: yellow;
+}
+.flex-box-2 {
+    background-color: blue;
+    color: white;
+}
+.flex-box-3 {
+    background-color: red;
+    color: white;
+}
+
+/*
+    Flex features are initialized by setting the value of the display property to flex as shown below.
+    The flex property applies to the elements contained in the parent. Here, flex is applied to box 1,
+    2, and 3 contained in .flex-container.
+    By default flex elements are aligned to the left in their container.
+*/
+
+.flex-container-display {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+}
+
+/*
+Elements within a flex container can be justified in many ways such as at the start, center, and end.
+Additionally you can add space-around or between the elements.
+ */
+.flex-container-display-center {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container-display-end {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+
+    display: flex;
+    justify-content: end;
+}
+
+.flex-container-display-space-around {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-container-display-space-between {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/*
+Flex elements can also be justified vertically with the align-items property.
+
+Setting the align-items property to flex-start aligns the elements at the top of their container.
+Setting it to center aligns the elements vertically in the middle of the container,
+and flex-end aligns the elements vertically at the bottom of the container.
+ */
+.flex-container-align-flex-start {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.flex-container-align-center {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flex-container-align-flex-end {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+/*
+Flex elements can also be configured to stretch evenly horizontally and vertically to fill their container.
+ */
+.flex-container-stretch-evenly {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+
+    display: flex;
+    /*justify-content: space-evenly;*/
+    /*align-items: center;*/
+}
+.flex-container-stretch-evenly > .flex-box {
+    flex-basis: 100%;
+}
+
+/*
+Media queries allow browsers to adapt their rendering for specific media types such as printed media,
+screens, projectors, etc. Media output can be configured to use certain styles for different screen sizes.
+
+The examples below illustrate how we can apply a certain style for a specific window size range.
+In the example below we set the body's and paragraph's background color based on the size of the window
+ */
+@media (min-width: 0px) and (max-width: 600px) {
+    body {
+        background-color: palevioletred;
+    }
+    .media-query {
+        background-color: hotpink;
+        color: white;
+    }
+}
+
+/*
+If we add additional media rules we can trigger additional styles for different screen sizes.
+The example bellow toggles background and foreground colors based on the size of the screen
+ */
+@media (min-width: 600px) and (max-width: 1200px) {
+    body {
+        background-color: blueviolet;
+        color: white;
+    }
+    .media-query {
+        background-color: yellow;
+        color: orange;
+    }
+}
+
+/*
+Adding a third media rule breaks up the styles applied based on 4 different screen size ranges:
+0-600px, 600-1200px, 1200-1800px, and larger than 1800px.
+ */
+@media (min-width: 1200px) and (max-width: 1800px) {
+    body {
+        background-color: darkgreen;
+        color: darkseagreen;
+    }
+    .media-query {
+        background-color: darkblue;
+        color: lightblue;
+    }
+}
+
+
