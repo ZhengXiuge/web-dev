@@ -1,0 +1,49 @@
+html, body {
+    background-color: black;
+    color: white;
+}
+
+.btn-primary.override-bs {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.wd-border-bottom {
+    color: lightgray;
+    border-style: solid;
+}
+
+.wd-search-bar {
+    border-radius: 50px;
+    color: lightgray;
+    width: 100%;
+}
+
+.wd-img-font {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.wd-topic {
+    font-size: 13px;
+    color: rgb(110,118,125);
+}
+
+.wd-title {
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+}
+
+.wd-hour {
+    font-size: 13px;
+    color: rgb(110,118,125);
+    font-weight: normal;
+}
+
+.wd-handle {
+    font-size: 13px;
+    color: rgb(110,118,125);
+    font-weight: normal;
+}
