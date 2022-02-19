@@ -20,6 +20,10 @@
     font-weight: bold;
 }
 
+.wd-post-wrapper .row{
+    margin: 0px;
+}
+
 .wd-topic {
     font-size: 13px;
     color: rgb(110,118,125);
