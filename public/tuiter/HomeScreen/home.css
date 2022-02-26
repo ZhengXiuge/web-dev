@@ -1,0 +1,42 @@
+.wd-topic {
+    font-size: 13px;
+    color: rgb(110,118,125);
+}
+
+.wd-userName {
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+}
+
+/*
+handle, time, content, replies, retweets, likes, share
+ */
+.wd-handle {
+    font-size: 13px;
+    color: rgb(110,118,125);
+    font-weight: normal;
+}
+
+/*
+po, title
+ */
+.wd-po {
+    color: white;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.wd-icon-color {
+    color: lightgray;
+}
+
+.wd-bookmark-icon {
+    padding-top: 12px;
+    color: lightgray;
+}
+
+.wd-icon {
+    float: left;
+    width: 25%;
+}
