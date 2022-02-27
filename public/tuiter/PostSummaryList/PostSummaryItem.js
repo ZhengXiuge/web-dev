@@ -11,9 +11,8 @@ const PostSummaryItem = (post) => {
                         <span class="wd-time"> - ${post.time}</span><br/>
                         ${post.title}
                     </div>
-                    <div class="wd-topic">
-                        ${post.tweets} Tweets
-                    </div>
+                    ${post.booleantweet ? `<div class='wd-topic'>${post.tweets} Tweets </div>` : ""}
+                    
                 </div>
                 <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-3">
                     <img src=${post.image} width="60px" class="rounded-2">

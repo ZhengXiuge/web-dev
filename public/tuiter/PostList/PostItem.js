@@ -13,7 +13,7 @@ const PostItem = (post) => {
                     </div>
                     
                     <div class="border">
-                        <img src=${post.image} width="504px" height="264px"/>
+                        <img src=${post.image} width="445px" height="264px"/>
                         <div class="wd-po">
                             ${post.title}
                         </div>
@@ -23,9 +23,9 @@ const PostItem = (post) => {
                     </div>
                     
                     <div class="wd-icon-color pt-2">
-                        <div class="wd-icon"><a href="#"><i class="fa-solid fa-comment pe-5"></i>${post.replies}</a></div>
-                        <div class="wd-icon"><a href="#"><i class="fa-solid fa-retweet pe-5"></i>${post.retweets}</a></div>
-                        <div class="wd-icon"><a href="#"><i class="fa-solid fa-heart wd-heart-icon-color pe-5"></i>
+                        <div class="wd-icon"><a href="#"><i class="far fa-comment pe-2"></i>${post.replies}</a></div>
+                        <div class="wd-icon"><a href="#"><i class="fa-solid fa-retweet pe-2"></i>${post.retweets}</a></div>
+                        <div class="wd-icon"><a href="#"><i class="fa-solid fa-heart wd-heart-icon-color pe-2"></i>
                             <span class="wd-heart-icon-color">${post.likes}</span>
                         </a></div>
                         <div class="wd-icon"><a href="#"><i class="fa-solid fa-arrow-up-from-bracket"></i></a></div>
