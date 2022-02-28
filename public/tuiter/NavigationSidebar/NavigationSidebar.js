@@ -5,6 +5,8 @@ const NavigationSidebar = () => {
                     <i class="fab fa-twitter"></i>
                 </a>
                 <!-- continue the rest of the list -->
+                
+                
                 <a class="list-group-item" href="/">
                     <div class="row">
                         <div class="col-2">

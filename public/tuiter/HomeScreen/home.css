@@ -10,9 +10,15 @@
 }
 
 /*
-handle, time, content, replies, retweets, likes, share
+handle, content, replies, retweets, likes, share
  */
 .wd-handle {
+    font-size: 13px;
+    color: rgb(110,118,125);
+    font-weight: normal;
+}
+
+.wd-time {
     font-size: 13px;
     color: rgb(110,118,125);
     font-weight: normal;
@@ -32,11 +38,20 @@ po, title
 }
 
 .wd-bookmark-icon {
-    padding-top: 12px;
     color: lightgray;
+}
+
+.wd-bookmark-icon a {
+    color: gray;
+    text-decoration: none;
+    font-weight: normal;
 }
 
 .wd-icon {
     float: left;
     width: 25%;
+}
+
+.wd-heart-icon-color {
+    color: palevioletred;
 }
