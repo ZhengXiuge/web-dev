@@ -1,13 +1,12 @@
-const NavigationSidebar = () => {
+const NavigationSidebar = (active) => {
     return(`
             <div class="list-group">
                 <a class="list-group-item" href="/">
                     <i class="fab fa-twitter"></i>
                 </a>
                 <!-- continue the rest of the list -->
-                
-                
-                <a class="list-group-item" href="/">
+                <a href="../HomeScreen/home.html" style="text-decoration:none">
+                ${active === 'home' ? `<a class="list-group-item active" href="../HomeScreen/home.html">` : `<a class="list-group-item" href="../HomeScreen/home.html">`}
                     <div class="row">
                         <div class="col-2">
                             <i class="fas fa-home"></i>
@@ -17,7 +16,9 @@ const NavigationSidebar = () => {
                         </div>
                     </div>
                 </a>
-                <a class="list-group-item active" href="/">
+                
+                <a href="../ExploreScreen/explore.html" style="text-decoration:none">
+                ${active === 'explore' ? `<a class="list-group-item active" href="../ExploreScreen/explore.html">` : `<a class="list-group-item" href="../ExploreScreen/explore.html">`}
                     <div class="row">
                         <div class="col-2">
                             <i class="fas fa-hashtag"></i>
