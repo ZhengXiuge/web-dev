@@ -7,9 +7,9 @@ export default [
     {   avatarIcon: '../images/virgin-logo.png',
         userName: 'Virgin Galactic',
         handle: 'virgingalactic', },
-    {   avatarIcon: '../images/nasa-logo.jpg',
+    {   avatarIcon: '../images/nasa-logo-web-rgb_capture.png',
         userName: 'NASA', handle: 'NASA', },
-    {   avatarIcon: '../images/tesla-logo.png',
+    {   avatarIcon: '../images/Tesla_logo.png',
         userName: 'Tesla', handle: 'Tesla', }, ];
 
 
