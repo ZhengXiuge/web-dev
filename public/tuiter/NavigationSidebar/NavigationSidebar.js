@@ -83,7 +83,7 @@ const NavigationSidebar = (active) => {
                         <div class="col-2 ps-0">
                             <span class="fa-stack fa-1x">
                                 <i class="fas fa-circle fa-stack-1x"></i>
-                                <i class="fas fa-ellipsis-h fa-stack-1x fa-inverse md-ellipsis-icon-color"></i>
+                                <i class="fas fa-ellipsis-h fa-stack-1x fa-inverse"></i>
                             </span>
                         </div>
                         <div class="col-10 d-none d-xl-block">
