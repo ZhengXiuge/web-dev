@@ -25,7 +25,7 @@ const PostItem = (
             <div className="border-bottom border-secondary pt-2 pb-2">
                 <div className="row">
                     <div className="col-1">
-                        <img src={post.avatar} alt="avatar image" width="35px" className="rounded-circle"/>
+                        <img src={post.avatar} alt="avatar" width="35px" className="rounded-circle"/>
                     </div>
                     <div className="col-10 wd-userName">
                         {post.userName} <i className="fas fa-check-circle"></i>
@@ -35,7 +35,7 @@ const PostItem = (
                         </div>
 
                         <div className="card bg-transparent border-secondary mt-2">
-                            <img src={post.image} alt="post image"
+                            <img src={post.image} alt="post"
                                  className="card-img-top border-bottom border-secondary"/>
                             {post.postContent ?
                             <div> 
