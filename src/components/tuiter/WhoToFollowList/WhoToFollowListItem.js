@@ -15,10 +15,10 @@ const WhoToFollowListItem = (
      */
     return(
         <>
-            <a className="list-group-item">
+            <li className="list-group-item">
                 <div className="row">
                     <div className="col-2">
-                        <img src={who.avatarIcon} width="40px" className="rounded-circle"/>
+                        <img src={who.avatarIcon} alt="avatar" width="40px" className="rounded-circle"/>
                     </div>
                     <div className="col-6 wd-userName">
                         {who.userName} <i className="fas fa-check-circle"></i>
@@ -32,7 +32,7 @@ const WhoToFollowListItem = (
                         </button>
                     </div>
                 </div>
-            </a>
+            </li>
         </>
     );
 }

@@ -25,7 +25,7 @@ const PostItem = (
             <div className="border-bottom border-secondary pt-2 pb-2">
                 <div className="row">
                     <div className="col-1">
-                        <img src={post.avatar} width="35px" className="rounded-circle"/>
+                        <img src={post.avatar} alt="avatar image" width="35px" className="rounded-circle"/>
                     </div>
                     <div className="col-10 wd-userName">
                         {post.userName} <i className="fas fa-check-circle"></i>
@@ -35,7 +35,7 @@ const PostItem = (
                         </div>
 
                         <div className="card bg-transparent border-secondary mt-2">
-                            <img src={post.image}
+                            <img src={post.image} alt="post image"
                                  className="card-img-top border-bottom border-secondary"/>
                             {post.postContent ?
                             <div> 
@@ -49,17 +49,17 @@ const PostItem = (
                         </div>
 
                         <div className="wd-bookmark-icon pt-2">
-                            <div className="wd-icon"><a href="#"><i
-                                className="far fa-comment pe-2"></i>{post.replies}</a></div>
-                            <div className="wd-icon"><a href="#"><i
-                                className="far fa-arrow-alt-circle-right pe-2"></i>{post.retweets}
-                            </a></div>
-                            <div className="wd-icon"><a href="#"><i
-                                className="fas fa-heart wd-heart-icon-color pe-2"></i>
+                            <div className="wd-icon">
+                                <i className="far fa-comment pe-2"></i>{post.replies}</div>
+                            <div className="wd-icon">
+                                <i className="far fa-arrow-alt-circle-right pe-2"></i>{post.retweets}
+                            </div>
+                            <div className="wd-icon">
+                                <i className="fas fa-heart wd-heart-icon-color pe-2"></i>
                                 <span className="wd-heart-icon-color">{post.likes} </span>
-                            </a></div>
-                            <div className="wd-icon"><a href="#"><i
-                                className="fas fa-external-link-alt"></i></a></div>
+                            </div>
+                            <div className="wd-icon">
+                                <i className="fas fa-external-link-alt"></i></div>
                         </div>
                     </div>
                 </div>

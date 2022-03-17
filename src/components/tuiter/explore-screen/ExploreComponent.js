@@ -39,7 +39,7 @@ const ExploreComponent = () => {
 
 
             <div className="position-relative mb-2">
-                <img src="./images/Starship.jpg" width="100%"/>
+                <img src="./images/Starship.jpg" alt="starship" width="100%"/>
                 <div className="position-absolute bottom-0 start-0 ps-2 pb-2 wd-img-font">SpaceX' Starship</div>
             </div>
 

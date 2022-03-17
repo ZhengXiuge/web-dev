@@ -1,16 +1,16 @@
 import React from "react";
 // Instead of typing the links in a browser's navigation bar, we can create hyperlinks in our components that navigate between components.
 import {Link} from "react-router-dom";
-import NavigationSidebar from "./NavigationSidebar/NavigationSidebar";
-import WhoToFollowListItem from "./WhoToFollowList/WhoToFollowListItem";
-import WhoToFollowList from "./WhoToFollowList/WhoToFollowList";
-import PostSummaryItem from "./PostSummaryList/PostSummaryItem";
-import PostSummaryList from "./PostSummaryList/PostSummaryList";
-import ExploreComponent from "./explore-screen/ExploreComponent";
+// import NavigationSidebar from "./NavigationSidebar/NavigationSidebar";
+// import WhoToFollowListItem from "./WhoToFollowList/WhoToFollowListItem";
+// import WhoToFollowList from "./WhoToFollowList/WhoToFollowList";
+// import PostSummaryItem from "./PostSummaryList/PostSummaryItem";
+// import PostSummaryList from "./PostSummaryList/PostSummaryList";
+// import ExploreComponent from "./explore-screen/ExploreComponent";
 import ExploreScreen from "./explore-screen/ExploreScreen";
-import PostItem from "./PostList/PostItem";
-import PostList from "./PostList/PostList";
-import HomeScreen from "./home-screen/HomeScreen";
+// import PostItem from "./PostList/PostItem";
+// import PostList from "./PostList/PostList";
+// import HomeScreen from "./home-screen/HomeScreen";
 
 const Tuiter = () => {
     return(
