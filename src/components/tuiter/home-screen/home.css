@@ -1,0 +1,61 @@
+.wd-topic {
+    font-size: 13px;
+    color: rgb(110,118,125);
+}
+
+.wd-userName {
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+}
+
+/*
+handle, content, replies, retweets, likes, share
+ */
+.wd-handle {
+    font-size: 13px;
+    color: rgb(110,118,125);
+    font-weight: normal;
+}
+
+.wd-time {
+    font-size: 13px;
+    color: rgb(110,118,125);
+    font-weight: normal;
+}
+
+/*
+po, title
+ */
+.wd-po {
+    color: white;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.wd-icon-color {
+    color: lightgray;
+}
+
+.wd-bookmark-icon {
+    color: lightgray;
+}
+
+.wd-bookmark-icon a {
+    color: gray;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.wd-icon {
+    float: left;
+    width: 25%;
+}
+
+.fa-inverse {
+    color: #222 !important;
+}
+
+.wd-heart-icon-color {
+    color: palevioletred;
+}
