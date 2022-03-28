@@ -42,10 +42,10 @@ const WhatsHappening = () => {
                     </textarea>
                     <hr/>
                     <span>
-                        <a href="#"><i className="far fa-image"></i></a>
-                        <a href="#"><i className="fas fa-chart-bar ps-2"></i></a>
-                        <a href="#"><i className="far fa-smile ps-2"></i></a>
-                        <a href="#"><i className="far fa-calendar ps-2"></i></a>
+                        <a href="/tuiter/home"><i className="far fa-image"></i></a>
+                        <a href="/tuiter/home"><i className="fas fa-chart-bar ps-2"></i></a>
+                        <a href="/tuiter/home"><i className="far fa-smile ps-2"></i></a>
+                        <a href="/tuiter/home"><i className="far fa-calendar ps-2"></i></a>
                     </span>
                     <button onClick={tuitClickHandler} className="btn btn-primary rounded-pill fa-pull-right">
                         Tweet

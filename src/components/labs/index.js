@@ -1,7 +1,8 @@
 import React from "react";
 // Instead of typing the links in a browser's navigation bar, we can create hyperlinks in our components that navigate between components.
 import {Link} from "react-router-dom";
-import Classes from "./classes";
+// import Classes from "./classes";
+
 /*
 In HTML the styles attribute accepts a CSS string to style the element applied to.
 In React.js, the styles attribute does not accept a string, instead it accepts a JSON object where
