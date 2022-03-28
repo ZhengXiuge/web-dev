@@ -17,6 +17,8 @@ import Tuiter from "./components/tuiter"; // no .js extension needed
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import HomeScreen from "./components/tuiter/home-screen/HomeScreen";
 import ExploreScreen from "./components/tuiter/explore-screen/ExploreScreen";
+import ProfileScreen from "./components/tuiter/profile-screen/ProfileScreen";
+import EditProfile from "./components/tuiter/Profile/EditProfile";
 
 function App() { // can also use const App = () => {
   return (
@@ -29,27 +31,59 @@ function App() { // can also use const App = () => {
       // We can declare the Labs component as the default landing screen by mapping it to "/", the root path.
       // We can also map multiple paths by declaring them in an array of paths as shown below.
 
+      /*
+      The routes below define a top level route that contain nested routes labs, hello world, and tuiter.
+      Within the tuiter route there are several routes related to the tuiter application.
+       */
       <BrowserRouter>
           <div className="container">
               <Routes>
-                  <Route path="/hello"
-                         exact={true}
-                         element={<HelloWorld/>}/>
-                  <Route path="/"
-                         exact={true}
-                         element={<Labs/>}/>
-                  <Route path="/tuiter"
-                         exact={true}
-                         element={<Tuiter/>}/>
-                  <Route path="/tuiter/home"
-                         exact={true}
-                         element={<HomeScreen/>}/>
-                  <Route path="/tuiter/explore"
-                         exact={true}
-                         element={<ExploreScreen/>}/>
+                  <Route path="/">
+                      <Route index element={<Labs />} />
+                      <Route path="labs" exact={true} element={<Labs />} />
+                      {/*<Route path="labs"*/}
+                      {/*       element={<Labs/>}/>*/}
+                      <Route path="hello"
+                             element={<HelloWorld/>}/>
+                      <Route path="tuiter"
+                             element={<Tuiter/>}>
+                          <Route path="home"
+                                 element={<HomeScreen/>}/>
+                          <Route path="explore"
+                                 element={<ExploreScreen/>}/>
+                          <Route path="profile"
+                                 element={<ProfileScreen/>}/>
+                          <Route path="edit"
+                                 element={<EditProfile/>}/>
+                          {/*<Route path="notifications"*/}
+                          {/*       element={<NotificationScreen/>}/>*/}
+                      </Route>
+                  </Route>
               </Routes>
           </div>
       </BrowserRouter>
+
+      // <BrowserRouter>
+      //     <div className="container">
+      //         <Routes>
+      //             <Route path="/hello"
+      //                    exact={true}
+      //                    element={<HelloWorld/>}/>
+      //             <Route path="/"
+      //                    exact={true}
+      //                    element={<Labs/>}/>
+      //             <Route path="/tuiter"
+      //                    exact={true}
+      //                    element={<Tuiter/>}/>
+      //             <Route path="/tuiter/home"
+      //                    exact={true}
+      //                    element={<HomeScreen/>}/>
+      //             <Route path="/tuiter/explore"
+      //                    exact={true}
+      //                    element={<ExploreScreen/>}/>
+      //         </Routes>
+      //     </div>
+      // </BrowserRouter>
 
     // <div className="App">
     //   <header className="App-header">

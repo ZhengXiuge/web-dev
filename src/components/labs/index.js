@@ -7,9 +7,10 @@ In HTML the styles attribute accepts a CSS string to style the element applied t
 In React.js, the styles attribute does not accept a string, instead it accepts a JSON object where
 the properties are CSS properties and the values are CSS values.
  */
-import Styles from "./styles";
-import ConditionalOutput from "./conditional-output";
-import TodoList from "./todo/TodoList";
+// import Styles from "./styles";
+// import ConditionalOutput from "./conditional-output";
+// import TodoList from "./todo/TodoList";
+import ReduxExamples from "./redux-examples";
 
 const Labs = () => {
     return(
@@ -22,21 +23,12 @@ const Labs = () => {
                 Tuiter
             </Link>
 
-            <TodoList/>
-            <ConditionalOutput/>
-            <Styles/>
-            <Classes/>
+            <ReduxExamples/>
+            {/*<TodoList/>*/}
+            {/*<ConditionalOutput/>*/}
+            {/*<Styles/>*/}
+            {/*<Classes/>*/}
         </div>
-
-        // <>
-        //     <h1>Labs</h1>
-        //     <Link to="/hello">
-        //         Hello
-        //     </Link> |
-        //     <Link to="/tuiter">
-        //         Tuiter
-        //     </Link>
-        // </>
     )
 };
 

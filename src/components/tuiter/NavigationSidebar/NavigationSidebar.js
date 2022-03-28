@@ -2,7 +2,7 @@
 1. The first thing you need to do is to import the React.js library. All React components must at least import this one library.
  */
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 const NavigationSidebar = (
     /*
@@ -10,8 +10,12 @@ const NavigationSidebar = (
     Convert all parameters into an object deconstructor and provide initial default values.
      */
     {
-        active = 'explore'
+        active
+        // active = 'explore'
     }) => {
+
+    const {pathname} = useLocation();
+
     /*
     3. React function components return HTML elements, not strings
     Previous components were rendered with string manipulation. Using JSX and React.js we can instead render HTML elements. Remove the backticks ( ` ) quotations in the return statement.
@@ -30,18 +34,19 @@ const NavigationSidebar = (
         If an attribute value is dynamic then refactor it to use string template expressions instead as shown below.
          */
         <div>
+            {/*{JSON.stringify(pathname)}*/}
             <div className="list-group">
                 <Link to="/" className="list-group-item">
                     <i className="fab fa-twitter"></i>
                 </Link>
 
                 <Link to="/tuiter/home"
-                      className={`list-group-item ${active === 'home' ? 'active' : ''}`}>
+                      className={`list-group-item ${pathname === '/tuiter/home' ? 'active' : ''}`}>
                     <i className="fa fa-home"></i>
                     <span className="d-none d-xl-inline ps-2">Home</span>
                 </Link>
                 <Link to="/tuiter/explore"
-                      className={`list-group-item ${active === 'explore' ? 'active' : ''}`}>
+                      className={`list-group-item ${pathname === '/tuiter/explore' ? 'active' : ''}`}>
                     <i className="fa fa-hashtag"></i>
                     <span className="d-none d-xl-inline ps-2">Explore</span>
                 </Link>
@@ -65,11 +70,11 @@ const NavigationSidebar = (
                     <i className="fa fa-list"></i>
                     <span className="d-none d-xl-inline ps-2">Lists</span>
                 </a>
-                <a className={`list-group-item ${active === 'profile' ? 'active' : ''}`}
-                   href="profile.html">
+                <Link to="/tuiter/profile"
+                      className={`list-group-item ${pathname === '/tuiter/profile' ? 'active' : ''}`}>
                     <i className="fa fa-user"></i>
                     <span className="d-none d-xl-inline ps-2">Profile</span>
-                </a>
+                </Link>
                 <a className={`list-group-item ps-0${active === 'more' ? 'active' : ''}`}
                    href="more.html">
                     <span className="fa-stack fa-1x">

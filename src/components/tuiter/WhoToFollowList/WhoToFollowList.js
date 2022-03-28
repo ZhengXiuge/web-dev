@@ -5,7 +5,8 @@ and it is best practice to remove it when importing a module
  */
 import React from "react";
 import WhoToFollowListItem from "./WhoToFollowListItem";
-import whos from "./whos.json"
+// import whos from "./whos.json" // we moved the data into the reducer instead
+import {useSelector} from "react-redux"; // import hook to retrieve state from reducer
 
 /*
 The WhoToFollowList component iterates over the who array using a map function. The map function
@@ -17,19 +18,23 @@ const WhoToFollowList = () => {
     // Remove the unnecessary $ and join() functions.
     // Replace the WhoToFollowListItem function call with its tag representation.
     // Pass the who instance as an attribute value.
+
+    // use the useSelector hook to retrieve the state from the store
+    const whos = useSelector(state => state.who);      // retrieve state from store
+
     return (
-            <ul className="list-group">
-                <a className="list-group-item wd-userName" href="/">
-                    Who to follow
-                </a>
-                {
-                    whos.map(who => {
-                        return(
-                            <WhoToFollowListItem who={who}/>
-                            );
-                    })
-                }
-            </ul>
+        <ul className="list-group">
+            <a className="list-group-item wd-userName" href="/">
+                Who to follow
+            </a>
+            {
+                whos.map(who => {
+                    return(
+                        <WhoToFollowListItem who={who}/>
+                        );
+                })
+            }
+        </ul>
     );
 }
 export default WhoToFollowList;
