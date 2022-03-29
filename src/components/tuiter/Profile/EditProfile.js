@@ -87,47 +87,40 @@ const EditProfile = () => {
                      style={{position:'absolute', border:'solid 5px black', top:'-58px', left:'-2px'}}/>
 
                 <div style={{position:'relative', top:'75px'}}>
-                    <div className="mt-2">
-                        <label htmlFor="fistName">First Name</label>
-                        <textarea className="bg-black text-white" id="fistName" style={{width: "100%"}}
-                                  value={firstName} onChange={firstNameChangeHandler}>
-                                {/*{profiles.firstName}*/}
-                        </textarea>
+                    <div className="form-floating mt-2">
+                        <input type="text" className="form-control bg-black text-white border" id="firstName"
+                                  value={firstName} name="firstName" onChange={firstNameChangeHandler}></input>
+                        <label htmlFor="firstName">First Name</label>
                     </div>
 
-                    <div className="mt-2">
+                    <div className="form-floating mt-2">
+                        <input type="text" className="form-control bg-black text-white border" id="lastName"
+                               value={lastName} name="lastName" onChange={lastNameChangeHandler}></input>
                         <label htmlFor="lastName">Last Name</label>
-                        <textarea className="bg-black text-white" id="lastName" style={{width: "100%"}}
-                                  value={lastName} onChange={lastNameChangeHandler}>
-                        </textarea>
                     </div>
 
-                    <div className="mt-2">
+                    <div className="form-floating mt-2">
+                        <textarea type="text" className="form-control bg-black text-white border"
+                                  style={{height: "100px"}} id="bio" value={bio} name="bio" onChange={bioChangeHandler}></textarea>
                         <label htmlFor="bio">Bio</label>
-                        <textarea className="bg-black text-white" id="bio" style={{width: "100%"}}
-                                  value={bio} onChange={bioChangeHandler}>
-                        </textarea>
                     </div>
 
-                    <div className="mt-2">
+                    <div className="form-floating mt-2">
+                        <input type="text" className="form-control bg-black text-white border" id="location"
+                               value={location} name="location" onChange={locationChangeHandler}></input>
                         <label htmlFor="location">Location</label>
-                        <textarea className="bg-black text-white" id="location" style={{width: "100%"}}
-                                  value={location} onChange={locationChangeHandler}>
-                        </textarea>
                     </div>
 
-                    <div className="mt-2">
+                    <div className="form-floating mt-2">
+                        <input type="text" className="form-control bg-black text-white border" id="website"
+                               value={website} name="website" onChange={websiteChangeHandler}></input>
                         <label htmlFor="website">Website</label>
-                        <textarea className="bg-black text-white" id="website" style={{width: "100%"}}
-                                  value={website} onChange={websiteChangeHandler}>
-                        </textarea>
                     </div>
 
-                    <div className="mt-2">
+                    <div className="form-floating mt-2">
+                        <input type="text" className="form-control bg-black text-white border" id="dateOfBirth"
+                               value={dateOfBirth} name="dateOfBirth" onChange={dateOfBirthChangeHandler}></input>
                         <label htmlFor="dateOfBirth">Birth Date</label>
-                        <textarea className="bg-black text-white" id="dateOfBirth" style={{width: "100%"}}
-                                  value={dateOfBirth} onChange={dateOfBirthChangeHandler}>
-                        </textarea>
                     </div>
 
                 </div>
