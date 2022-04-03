@@ -3,15 +3,18 @@ import "./tuits.css"
 import {useDispatch} from "react-redux";
 import TuitStats from "./tuit-stats";
 
+import {deleteTuit}
+    from "../../actions/tuits-actions";
+
 const TuitListItem = ({tweet}) => {
     /*
     When the user clicks on the icon, use the redux dispatcher to notify the reducer with a delete-tuit event,
     and the tuit itself. The reducer can then remove the tuit from the tuit array, and the list of tuit would re-render minus the deleted tuit.
      */
     const dispatch = useDispatch();                   // get dispatcher to send message to reducer
-    const deleteTuit = (tweet) => {                   // handle delete tuit click event
-        dispatch({type: 'delete-tuit', tuit: tweet})  // notify redux reducer with delete-tuit event and
-    };                                                // deleted tuit
+    // const deleteTuit = (tweet) => {                   // handle delete tuit click event
+    //     dispatch({type: 'delete-tuit', tuit: tweet})  // notify redux reducer with delete-tuit event and
+    // };                                                // deleted tuit
 
     return(
         <>
@@ -22,12 +25,15 @@ const TuitListItem = ({tweet}) => {
                         <img src={tweet["logo_image"]} alt="avatar" width="35px" className="rounded-circle"/>
                     </div>
                     <div className="col-11 wd-userName ps-3">
-                        <i onClick={() =>                   // create new remove icon on top, right corner of
-                            deleteTuit(tweet)}              // each tuit. Bind click event with click handler
-                           className="fas fa-times-circle
-                        fa-pull-right"></i>
+                        {/*<i onClick={() =>                   // create new remove icon on top, right corner of*/}
+                        {/*    deleteTuit(tweet)}              // each tuit. Bind click event with click handler*/}
+                        {/*   className="fas fa-times-circle*/}
+                        {/*fa-pull-right"></i>*/}
+                        <i className="fas fa-times-circle float-end"
+                           onClick={() => deleteTuit(
+                               dispatch, tweet)}></i>
 
-                        {tweet.postedBy.username} {tweet.verified && <i className="fas fa-check-circle"></i>}
+                        {tweet.postedBy.username}{tweet.verified && <i className="fas fa-check-circle"></i>}
                         <span className="wd-handle"> @{tweet.handle} • {tweet.time}</span>
                         <div className="wd-po">
                             {tweet.tuit}

@@ -11,10 +11,15 @@ send the state variable to the reducer to actually create the new tuit.
 import React, {useState} from "react";  // get the useState hook
 import "./whats-happening.css"
 import {useDispatch} from "react-redux";
+import {createTuit} from "../../actions/tuits-actions";
 
 const WhatsHappening = () => {
     let [whatsHappening, setWhatsHappening] // create whatsHappening state variable
         = useState('');
+
+    const [newTuit, setNewTuit] =                // create a new state variable with
+        useState({tuit: 'New tuit'});   // new tuit data
+
     /*
     Use the redux dispatcher to notify reducers of a create-tuit event. Pass the whatsHappening state
     variable to the reducer as part of a new tuit to add to the array of tuits.
@@ -27,6 +32,7 @@ const WhatsHappening = () => {
                      tuit: whatsHappening    // tuit including text written in textarea
                  });                         // saved in whatsHappening state variable
     }
+
     return (
         <>
             <div className="row pb-3">
@@ -34,12 +40,23 @@ const WhatsHappening = () => {
                     <img src={'./images/spacex.jpg'} alt="avatar" width="35px" className="rounded-circle"/>
                 </div>
                 <div className="col-11 ps-3">
-                    <textarea value={whatsHappening}                              // show current whatsHappening in textarea
-                              onChange={(event) =>  // if it changes, update whatsHappening with textarea's value
-                                  setWhatsHappening(event.target.value)}
-                              className="wd-textarea"
-                              placeholder="What's happening?">
-                    </textarea>
+                    <button onClick={() =>                              // click Tuit button
+                        createTuit(dispatch, newTuit)}                  // to invoke createTuit action, pass dispatcher and newTuit to send to server and then to the reducer
+                            className="btn btn-primary float-end">
+                        Tuit
+                    </button>
+                    <textarea className="form-control w-75 wd-textarea"
+                              onChange={(e) =>
+                                  setNewTuit({...newTuit,
+                                                 tuit: e.target.value})}
+                              placeholder="What's happening?"></textarea>
+
+                    {/*<textarea value={whatsHappening}                              // show current whatsHappening in textarea*/}
+                    {/*          onChange={(event) =>  // if it changes, update whatsHappening with textarea's value*/}
+                    {/*              setWhatsHappening(event.target.value)}*/}
+                    {/*          className="wd-textarea"*/}
+                    {/*          placeholder="What's happening?">*/}
+                    {/*</textarea>*/}
                     <hr/>
                     <span>
                         <a href="/tuiter/home"><i className="far fa-image"></i></a>

@@ -18,7 +18,8 @@ import {Provider} from "react-redux"             // import the Provider
 import {combineReducers, createStore} from "redux";               // import the reducer
 import whoReducer from "./reducers/who-reducer";
 import tuitsReducer from "./reducers/tuits-reducer";
-import profileReducer from "./reducers/profile-reducer"; // import the reducer
+import profileReducer from "./reducers/profile-reducer";
+import TuitList from "./tuit-list"; // import the reducer
 
 const reducer = combineReducers({tuits: tuitsReducer, who: whoReducer, profile: profileReducer});
 const store = createStore(reducer);           // create the store from the reducer
@@ -34,6 +35,7 @@ const Tuiter = () => {
                 </div>
                 <div className="col-10 col-lg-7 col-xl-6">
                     <Outlet/>
+                    {/*<TuitList/>*/}
                 </div>
                 <div className="d-none d-lg-block col-lg-4 col-xl-4">
                     <WhoToFollowList/>
