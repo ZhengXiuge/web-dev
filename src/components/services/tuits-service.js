@@ -15,6 +15,18 @@ application connects to a local Node server, which is fine when it's running loc
 // const TUITS_API = 'https://full-stack-developer-server-z.herokuapp.com/api/tuits';
 // const TUITS_API = 'http://localhost:4000/api/tuits';
 
+/*
+This is all and good and would work if we deploy the React application as is, but we would like the
+URL to point to the local Node server when developing locally, and use the remote server when deployed
+remotely without having to change the URLs manually ourselves. To automate which URL to use in what
+environment we can use environment variables to define application wide constants based on the
+environment the application is running in. Environment variables must start with REACT_APP_ and can
+be accessed from the React code using process.env as shown below retrieving environment variable
+REACT_APP_API_BASE. Locally REACT_APP_API_BASE can be set to http://localhost:4000/api, but when the
+application runs remotely it can instead be set to https://full-stack-developer-server.herokuapp.com/api.
+This way the local React application will connect to the local Node server, but use the Heroku Node
+server when running remotely in Netlify.
+ */
 const API_BASE = process.env.REACT_APP_API_BASE;
 const TUITS_API = `${API_BASE}/tuits`;
 
