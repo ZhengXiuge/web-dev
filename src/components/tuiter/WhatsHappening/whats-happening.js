@@ -17,7 +17,6 @@ const WhatsHappening = () => {
     // let [whatsHappening, setWhatsHappening] // create whatsHappening state variable
     //     = useState('');
 
-
     const [newTuit, setNewTuit] =                // create a new state variable with
         useState({tuit: 'New tuit'});   // new tuit data
 
