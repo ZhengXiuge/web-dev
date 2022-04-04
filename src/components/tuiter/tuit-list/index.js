@@ -9,7 +9,7 @@ Now we need to refactor tuit-list.js so that it retrieves the tuits from the sto
 // import tuits from "./tuits.json";
 import {useDispatch, useSelector} from "react-redux"; // replace getting tuits from a file to getting tuits from the store
 // import * as service from "../../services/tuits-service";
-import {createTuit, deleteTuit, findAllTuits} from "../../actions/tuits-actions";
+import {findAllTuits} from "../../actions/tuits-actions";
 
 const TuitList = () => {
     const tuits = useSelector( // get the tuits from the state in the store
@@ -23,17 +23,12 @@ const TuitList = () => {
      */
     const dispatch = useDispatch();
 
-
-
     /*
     Now that we have actions declared we can refactor TuitList removing the findAllTuits function
     implementation and instead using the findAllTuits action and passing a reference to the dispatch.
     We'll follow the same strategy for all other service and action implementation in the following sections.
      */
-    useEffect(() =>
-                  findAllTuits(dispatch),
-              []);
-
+    useEffect(() => findAllTuits(dispatch),[]);
 
     // const findAllTuits = async () => {
     //     const tuits = await service.findAllTuits();
@@ -44,17 +39,14 @@ const TuitList = () => {
     // }
     // useEffect(findAllTuits, []);
 
+    console.log(tuits)
     return (
         <ul className="ttr-tuits list-group">
             {
                 tuits.map && tuits.map(tuit =>
-
                    <TuitListItem key={tuit._id}
                                  tweet={tuit}/>)
-
-
             }
-
         </ul>
     );
 }

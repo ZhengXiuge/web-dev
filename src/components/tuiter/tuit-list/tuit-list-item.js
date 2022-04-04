@@ -33,7 +33,7 @@ const TuitListItem = ({tweet}) => {
                            onClick={() => deleteTuit(
                                dispatch, tweet)}></i>
 
-                        {tweet.postedBy.username}{tweet.verified && <i className="fas fa-check-circle"></i>}
+                        {tweet.postBy && tweet.postedBy.username}{tweet.verified && <i className="fas fa-check-circle"></i>}
                         <span className="wd-handle"> @{tweet.handle} • {tweet.time}</span>
                         <div className="wd-po">
                             {tweet.tuit}

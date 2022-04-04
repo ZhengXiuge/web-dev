@@ -11,8 +11,8 @@ import {updateTuit} from "../../actions/tuits-actions";
 const TuitStats = ({tuit}) => {
     const dispatch = useDispatch();
 
-    let likes = tuit.stats.likes
-    let dislikes = tuit.stats.dislikes
+    let likes = tuit.stats && tuit.stats.likes
+    let dislikes = tuit.stats && tuit.stats.dislikes
 
     const likeTuit = () => {
         /*
@@ -82,14 +82,14 @@ const TuitStats = ({tuit}) => {
 
         <div className="wd-bookmark-icon pt-2">
             <div className="wd-icon">
-                <i className="far fa-comment pe-2"></i>{tuit.stats.comments}</div>
+                <i className="far fa-comment pe-2"></i>{tuit.stats && tuit.stats.comments}</div>
             <div className="wd-icon">
-                <i className="far fa-arrow-alt-circle-right pe-2"></i>{tuit.stats.retuits}
+                <i className="far fa-arrow-alt-circle-right pe-2"></i>{tuit.stats && tuit.stats.retuits}
             </div>
 
             <div className="wd-icon" onClick={likeTuit} >
 
-                Likes: {tuit.stats.likes}
+                Likes: {tuit.stats && tuit.stats.likes}
                 {
                     tuit.liked &&
                     <i className="far fa-thumbs-up ms-2" style={{color: 'red'}}></i>
@@ -123,7 +123,7 @@ const TuitStats = ({tuit}) => {
 
             <div className="wd-icon" onClick={dislikeTuit} >
 
-                Dislikes: {tuit.stats.dislikes}
+                Dislikes: {tuit.stats && tuit.stats.dislikes}
                 {
                     tuit.disliked &&
                     <i className="far fa-thumbs-down ms-2" style={{color: 'red'}}></i>

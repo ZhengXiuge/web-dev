@@ -14,8 +14,8 @@ import {useDispatch} from "react-redux";
 import {createTuit} from "../../actions/tuits-actions";
 
 const WhatsHappening = () => {
-    let [whatsHappening, setWhatsHappening] // create whatsHappening state variable
-        = useState('');
+    // let [whatsHappening, setWhatsHappening] // create whatsHappening state variable
+    //     = useState('');
 
     const [newTuit, setNewTuit] =                // create a new state variable with
         useState({tuit: 'New tuit'});   // new tuit data
@@ -26,12 +26,12 @@ const WhatsHappening = () => {
      */
     const dispatch = useDispatch(); // use the hook to get a dispatcher
 
-    const tuitClickHandler = () => {
-        // console.log(whatsHappening);    // handle tuit button click just print whatsHappening state variable for now
-        dispatch({type: 'create-tuit', // use the dispatcher to notify reducer of new
-                     tuit: whatsHappening    // tuit including text written in textarea
-                 });                         // saved in whatsHappening state variable
-    }
+    // const tuitClickHandler = () => {
+    //     // console.log(whatsHappening);    // handle tuit button click just print whatsHappening state variable for now
+    //     dispatch({type: 'create-tuit', // use the dispatcher to notify reducer of new
+    //                  tuit: whatsHappening    // tuit including text written in textarea
+    //              });                         // saved in whatsHappening state variable
+    // }
 
     return (
         <>
@@ -64,9 +64,9 @@ const WhatsHappening = () => {
                         <a href="/tuiter/home"><i className="far fa-smile ps-2"></i></a>
                         <a href="/tuiter/home"><i className="far fa-calendar ps-2"></i></a>
                     </span>
-                    <button onClick={tuitClickHandler} className="btn btn-primary rounded-pill fa-pull-right">
-                        Tweet
-                    </button>
+                    {/*<button onClick={tuitClickHandler} className="btn btn-primary rounded-pill fa-pull-right">*/}
+                    {/*    Tweet*/}
+                    {/*</button>*/}
                 </div>
             </div>
 
