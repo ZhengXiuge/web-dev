@@ -39,7 +39,6 @@ const TuitList = () => {
     // }
     // useEffect(findAllTuits, []);
 
-    console.log(tuits)
     return (
         <ul className="ttr-tuits list-group">
             {

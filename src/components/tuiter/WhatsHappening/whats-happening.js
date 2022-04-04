@@ -42,15 +42,11 @@ const WhatsHappening = () => {
                     <img src={'./images/spacex.jpg'} alt="avatar" width="35px" className="rounded-circle"/>
                 </div>
                 <div className="col-11 ps-3">
-                    <button onClick={() =>                              // click Tuit button
-                        createTuit(dispatch, newTuit)}                  // to invoke createTuit action, pass dispatcher and newTuit to send to server and then to the reducer
-                            className="btn btn-primary float-end">
-                        Tuit
-                    </button>
                     <textarea className="form-control w-75 wd-textarea"
                               onChange={(e) =>
                                   setNewTuit({...newTuit,
                                                  tuit: e.target.value})}
+                              className="wd-textarea"
                               placeholder="What's happening?"></textarea>
 
                     {/*<textarea value={whatsHappening}                              // show current whatsHappening in textarea*/}
@@ -66,6 +62,12 @@ const WhatsHappening = () => {
                         <a href="/tuiter/home"><i className="far fa-smile ps-2"></i></a>
                         <a href="/tuiter/home"><i className="far fa-calendar ps-2"></i></a>
                     </span>
+
+                    <button onClick={() =>                              // click Tuit button
+                        createTuit(dispatch, newTuit)}                  // to invoke createTuit action, pass dispatcher and newTuit to send to server and then to the reducer
+                            className="btn btn-primary float-end">
+                        Tuit
+                    </button>
                     {/*<button onClick={tuitClickHandler} className="btn btn-primary rounded-pill fa-pull-right">*/}
                     {/*    Tweet*/}
                     {/*</button>*/}
