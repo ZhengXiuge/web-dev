@@ -28,7 +28,7 @@ const TuitList = () => {
     implementation and instead using the findAllTuits action and passing a reference to the dispatch.
     We'll follow the same strategy for all other service and action implementation in the following sections.
      */
-    useEffect(() => findAllTuits(dispatch),[]);
+    useEffect(() => findAllTuits(dispatch),[dispatch]);
 
     // const findAllTuits = async () => {
     //     const tuits = await service.findAllTuits();

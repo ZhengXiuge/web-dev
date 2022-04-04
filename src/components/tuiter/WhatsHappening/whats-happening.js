@@ -17,6 +17,7 @@ const WhatsHappening = () => {
     // let [whatsHappening, setWhatsHappening] // create whatsHappening state variable
     //     = useState('');
 
+
     const [newTuit, setNewTuit] =                // create a new state variable with
         useState({tuit: 'New tuit'});   // new tuit data
 
@@ -25,6 +26,7 @@ const WhatsHappening = () => {
     variable to the reducer as part of a new tuit to add to the array of tuits.
      */
     const dispatch = useDispatch(); // use the hook to get a dispatcher
+
 
     // const tuitClickHandler = () => {
     //     // console.log(whatsHappening);    // handle tuit button click just print whatsHappening state variable for now

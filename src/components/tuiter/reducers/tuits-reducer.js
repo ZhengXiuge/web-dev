@@ -22,11 +22,11 @@ const tuitsReducer = (state = [], action) => {
         // case 'FIND_ALL_TUITS':
         //     return action.tuits;
 
-       /*
-        The reducer creates a new state filtering out the removed tuit from the current state.
-        The new state travels through the store, Provider, selector, and back into the TuitList
-        component where the updated list of tuits renders.
-        */
+        /*
+         The reducer creates a new state filtering out the removed tuit from the current state.
+         The new state travels through the store, Provider, selector, and back into the TuitList
+         component where the updated list of tuits renders.
+         */
         case DELETE_TUIT:
             return state.filter(
                 tuit => tuit._id !== action.tuit._id);
@@ -35,9 +35,27 @@ const tuitsReducer = (state = [], action) => {
         through the store, provider, selector and back into the user interface for rendering.
          */
         case CREATE_TUIT:
+            const newTuit = {
+                tuit: action.tuit,
+                _id: (new Date()).getTime() + '',
+                postedBy: {
+                    "username": "ReactJS"
+                },
+                liked: false,
+                disliked: false,
+                stats: {
+                    retuits: 111,
+                    likes: 222,
+                    dislikes: 5,
+                    comments: 333
+                },
+                logo_image: "./images/spacex.jpg",
+                time: "2h",
+                handle: "ReactJS"
+            }
             return [
+                newTuit,
                 ...state,
-                action.newTuit
             ];
 
         /*
