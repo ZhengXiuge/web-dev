@@ -46,7 +46,6 @@ const WhatsHappening = () => {
                               onChange={(e) =>
                                   setNewTuit({...newTuit,
                                                  tuit: e.target.value})}
-                              className="wd-textarea"
                               placeholder="What's happening?"></textarea>
 
                     {/*<textarea value={whatsHappening}                              // show current whatsHappening in textarea*/}
