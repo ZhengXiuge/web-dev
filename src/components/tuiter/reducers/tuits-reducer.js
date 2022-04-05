@@ -35,26 +35,27 @@ const tuitsReducer = (state = [], action) => {
         through the store, provider, selector and back into the user interface for rendering.
          */
         case CREATE_TUIT:
-            const newTuit = {
-                tuit: action.newTuit.tuit,
-                _id: (new Date()).getTime() + '',
-                postedBy: {
-                    "username": "ReactJS"
-                },
-                liked: false,
-                disliked: false,
-                stats: {
-                    retuits: 111,
-                    likes: 222,
-                    dislikes: 5,
-                    comments: 333
-                },
-                logo_image: "./images/spacex.jpg",
-                time: "2h",
-                handle: "ReactJS"
-            }
+            // console.log(action.newTuit)
+            // const newTuit = {
+            //     tuit: action.newTuit.tuit,
+            //     _id: (new Date()).getTime() + '',
+            //     postedBy: {
+            //         "username": "ReactJS"
+            //     },
+            //     liked: false,
+            //     disliked: false,
+            //     stats: {
+            //         retuits: 111,
+            //         likes: 222,
+            //         dislikes: 5,
+            //         comments: 333
+            //     },
+            //     logo_image: "./images/spacex.jpg",
+            //     time: "2h",
+            //     handle: "ReactJS"
+            // }
             return [
-                newTuit,
+                action.newTuit,
                 ...state,
             ];
 
