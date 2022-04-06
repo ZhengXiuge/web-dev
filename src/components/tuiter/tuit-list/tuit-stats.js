@@ -27,11 +27,16 @@ const TuitStats = ({tuit}) => {
             tuit.liked = false;
             likes--;
         }
-        else if (tuit.liked === false){
+
+        else if (tuit.liked === false && tuit.disliked === true){
             tuit.liked = true;
             tuit.disliked = false;
             likes++;
             dislikes--;
+        }
+        else if (tuit.liked === false && tuit.disliked === false){
+            tuit.liked = true;
+            likes++;
         }
 
         const stats = {
@@ -59,11 +64,15 @@ const TuitStats = ({tuit}) => {
             tuit.disliked = false;
             dislikes--;
         }
-        else if (tuit.disliked === false) {
+        else if (tuit.disliked === false && tuit.liked === true) {
             tuit.disliked = true;
             tuit.liked = false;
             dislikes++;
             likes--;
+        }
+        else if (tuit.disliked === false && tuit.liked === false) {
+            tuit.disliked = true;
+            dislikes++;
         }
 
         const stats = {

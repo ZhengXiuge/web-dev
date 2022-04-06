@@ -10,7 +10,8 @@ import axios from 'axios';
 
 /*
 Let's now deploy our React client application to a remote server on Netlify. Currently our client
-application connects to a local Node server, which is fine when it's running locally, but it should use the remote Heroku Node server when it's also running remotely on Netlify.
+application connects to a local Node server, which is fine when it's running locally, but it should
+use the remote Heroku Node server when it's also running remotely on Netlify.
  */
 // const TUITS_API = 'https://full-stack-developer-server-z.herokuapp.com/api/tuits';
 // const TUITS_API = 'http://localhost:4000/api/tuits';
@@ -27,6 +28,7 @@ application runs remotely it can instead be set to https://full-stack-developer-
 This way the local React application will connect to the local Node server, but use the Heroku Node
 server when running remotely in Netlify.
  */
+// const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:4000/api';
 const API_BASE = process.env.REACT_APP_API_BASE;
 const TUITS_API = `${API_BASE}/tuits`;
 

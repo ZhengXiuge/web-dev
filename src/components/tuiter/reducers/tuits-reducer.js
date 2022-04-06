@@ -35,7 +35,7 @@ const tuitsReducer = (state = [], action) => {
         through the store, provider, selector and back into the user interface for rendering.
          */
         case CREATE_TUIT:
-            // console.log(action.newTuit)
+            console.log(action.newTuit)
             // const newTuit = {
             //     tuit: action.newTuit.tuit,
             //     _id: (new Date()).getTime() + '',
