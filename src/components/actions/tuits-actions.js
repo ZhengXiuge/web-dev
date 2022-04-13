@@ -37,11 +37,13 @@ The updateTuit action puts the updated tuit to the server using the correspondin
 tuit is dispatched to the reducer to be updated in the state.
  */
 export const updateTuit = async (dispatch, tuit) => {
-    // const status = await service.updateTuit(tuit);
-    dispatch({
-                 type: UPDATE_TUIT,
-                 tuit
-             });
+    const status = await service.updateTuit(tuit);
+    if (status.acknowledged === true) {
+        dispatch({
+                     type: UPDATE_TUIT,
+                     tuit
+                 });
+    }
 }
 
 /*
@@ -50,10 +52,12 @@ just status information from the corresponding endpoint on the server. If the st
 then we notify the reducer of the DELETE_TUIT action type and pass it the tuit being removed.
  */
 export const deleteTuit = async (dispatch, tuit) => {
-    // const response = await service.deleteTuit(tuit);
-    dispatch({
-                 type: DELETE_TUIT,
-                 tuit
-             })
+    const response = await service.deleteTuit(tuit);
+    if (response.acknowledged === true) {
+        dispatch({
+                     type: DELETE_TUIT,
+                     tuit
+                 })
+    }
 
 }
