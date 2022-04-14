@@ -29,7 +29,7 @@ This way the local React application will connect to the local Node server, but 
 server when running remotely in Netlify.
  */
 // const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:4000/api';
-const API_BASE = process.env.REACT_APP_API_BASE_A9;
+const API_BASE = process.env.REACT_APP_API_BASE_A9 || 'http://localhost:4000/api';
 const TUITS_API = `${API_BASE}/tuits`;
 
 /*
